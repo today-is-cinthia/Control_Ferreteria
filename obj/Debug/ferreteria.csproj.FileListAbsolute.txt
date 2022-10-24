@@ -1,0 +1,13 @@
+C:\ferreteria\obj\Debug\ferreteria.csproj.AssemblyReference.cache
+C:\ferreteria\obj\Debug\ferreteria.csproj.SuggestedBindingRedirects.cache
+C:\ferreteria\obj\Debug\ferreteria.Properties.Resources.resources
+C:\ferreteria\obj\Debug\ferreteria.csproj.GenerateResource.cache
+C:\ferreteria\obj\Debug\ferreteria.csproj.CoreCompileInputs.cache
+C:\ferreteria\bin\Debug\ferreteria.exe.config
+C:\ferreteria\bin\Debug\ferreteria.exe
+C:\ferreteria\bin\Debug\ferreteria.pdb
+C:\ferreteria\bin\Debug\FontAwesome.Sharp.dll
+C:\ferreteria\obj\Debug\ferreteria.Form1.resources
+C:\ferreteria\obj\Debug\ferreteria.csproj.CopyComplete
+C:\ferreteria\obj\Debug\ferreteria.exe
+C:\ferreteria\obj\Debug\ferreteria.pdb
