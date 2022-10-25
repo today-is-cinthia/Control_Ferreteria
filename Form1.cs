@@ -121,7 +121,7 @@ namespace ferreteria
         private void icbtn_ingresarMaterial_Click(object sender, EventArgs e)
         {
             Activarbotondepanel(sender, RGBcolore.color3);
-            //AbrirFormularioHijo(new AgregarCliente());
+            AbrirFormularioHijo(new AgregarCliente());
         }
 
         private void reset() /**/
@@ -219,7 +219,7 @@ namespace ferreteria
         private void icbtn_agregraProducto_Click(object sender, EventArgs e)
         {
             Activarbotondepanel(sender, RGBcolore.color1);
-            //AbrirFormularioHijo(new AgregarProducto());
+            AbrirFormularioHijo(new AgregarProducto());
         }
 
         private void icbtn_modificarProducto_Click_1(object sender, EventArgs e)

@@ -177,7 +177,7 @@
             this.icbtn_ingresarMaterial.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.icbtn_ingresarMaterial.Size = new System.Drawing.Size(200, 40);
             this.icbtn_ingresarMaterial.TabIndex = 4;
-            this.icbtn_ingresarMaterial.Text = "Ingresar Material";
+            this.icbtn_ingresarMaterial.Text = "Ingresar Ciente";
             this.icbtn_ingresarMaterial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.icbtn_ingresarMaterial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.icbtn_ingresarMaterial.UseVisualStyleBackColor = true;
@@ -200,7 +200,7 @@
             this.icbtn_materiales.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.icbtn_materiales.Size = new System.Drawing.Size(200, 40);
             this.icbtn_materiales.TabIndex = 13;
-            this.icbtn_materiales.Text = "Materiales";
+            this.icbtn_materiales.Text = "Clientes";
             this.icbtn_materiales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.icbtn_materiales.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.icbtn_materiales.UseVisualStyleBackColor = true;

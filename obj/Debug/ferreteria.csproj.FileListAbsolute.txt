@@ -11,3 +11,5 @@ C:\ferreteria\obj\Debug\ferreteria.Form1.resources
 C:\ferreteria\obj\Debug\ferreteria.csproj.CopyComplete
 C:\ferreteria\obj\Debug\ferreteria.exe
 C:\ferreteria\obj\Debug\ferreteria.pdb
+C:\ferreteria\obj\Debug\ferreteria.AgregarProducto.resources
+C:\ferreteria\obj\Debug\ferreteria.AgregarCliente.resources
