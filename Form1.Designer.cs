@@ -177,7 +177,7 @@
             this.icbtn_ingresarMaterial.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.icbtn_ingresarMaterial.Size = new System.Drawing.Size(200, 40);
             this.icbtn_ingresarMaterial.TabIndex = 4;
-            this.icbtn_ingresarMaterial.Text = "Ingresar Ciente";
+            this.icbtn_ingresarMaterial.Text = "Ingresar Cliente";
             this.icbtn_ingresarMaterial.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.icbtn_ingresarMaterial.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.icbtn_ingresarMaterial.UseVisualStyleBackColor = true;

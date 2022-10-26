@@ -68,6 +68,12 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Declaraciones.cs" />
     <Compile Include="Ferreteria.cs" />
+    <Compile Include="FiltrarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FiltrarClientes.designer.cs">
+      <DependentUpon>FiltrarClientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiltrarClientes.resx">
+      <DependentUpon>FiltrarClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

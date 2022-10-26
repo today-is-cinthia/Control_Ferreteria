@@ -1,6 +1,6 @@
 ﻿namespace ferreteria
 {
-    partial class VerMateriales
+    partial class FiltrarClientes
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnActualizarMaterial = new System.Windows.Forms.Button();
             this.txtAdvertencia = new System.Windows.Forms.Label();
-            this.dgvVerMateriales = new System.Windows.Forms.DataGridView();
+            this.gridClientes = new System.Windows.Forms.DataGridView();
             this.Buscar = new System.Windows.Forms.TextBox();
             this.txtVerNombreMaterial = new System.Windows.Forms.Label();
             this.errorActualizarMaterial = new System.Windows.Forms.ErrorProvider(this.components);
@@ -43,7 +43,8 @@
             this.errormarca = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorexistencia = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorPrecio = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVerMateriales)).BeginInit();
+            this.lb = new System.Windows.Forms.ListBox();
+            ((System.ComponentModel.ISupportInitialize)(this.gridClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorActualizarMaterial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errornombre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errormarca)).BeginInit();
@@ -81,16 +82,16 @@
             this.txtAdvertencia.Size = new System.Drawing.Size(0, 13);
             this.txtAdvertencia.TabIndex = 22;
             // 
-            // dgvVerMateriales
+            // gridClientes
             // 
-            this.dgvVerMateriales.AllowUserToAddRows = false;
-            this.dgvVerMateriales.AllowUserToOrderColumns = true;
-            this.dgvVerMateriales.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.gridClientes.AllowUserToAddRows = false;
+            this.gridClientes.AllowUserToOrderColumns = true;
+            this.gridClientes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvVerMateriales.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvVerMateriales.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgvVerMateriales.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
-            this.dgvVerMateriales.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.gridClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridClientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.gridClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
+            this.gridClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(66)))), ((int)(((byte)(91)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -98,9 +99,9 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVerMateriales.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvVerMateriales.ColumnHeadersHeight = 30;
-            this.dgvVerMateriales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.gridClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridClientes.ColumnHeadersHeight = 30;
+            this.gridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -108,12 +109,12 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVerMateriales.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvVerMateriales.EnableHeadersVisualStyles = false;
-            this.dgvVerMateriales.Location = new System.Drawing.Point(27, 210);
-            this.dgvVerMateriales.Name = "dgvVerMateriales";
-            this.dgvVerMateriales.ReadOnly = true;
-            this.dgvVerMateriales.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.gridClientes.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gridClientes.EnableHeadersVisualStyles = false;
+            this.gridClientes.Location = new System.Drawing.Point(27, 210);
+            this.gridClientes.Name = "gridClientes";
+            this.gridClientes.ReadOnly = true;
+            this.gridClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -121,8 +122,8 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkSlateGray;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvVerMateriales.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvVerMateriales.RowHeadersVisible = false;
+            this.gridClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.gridClientes.RowHeadersVisible = false;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -130,11 +131,11 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvVerMateriales.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvVerMateriales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVerMateriales.Size = new System.Drawing.Size(650, 214);
-            this.dgvVerMateriales.TabIndex = 37;
-            this.dgvVerMateriales.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVerMateriales_CellClick);
+            this.gridClientes.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.gridClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridClientes.Size = new System.Drawing.Size(650, 214);
+            this.gridClientes.TabIndex = 37;
+            this.gridClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvVerMateriales_CellClick);
             // 
             // Buscar
             // 
@@ -181,22 +182,32 @@
             // 
             this.errorPrecio.ContainerControl = this;
             // 
-            // VerMateriales
+            // lb
+            // 
+            this.lb.FormattingEnabled = true;
+            this.lb.Location = new System.Drawing.Point(533, 87);
+            this.lb.Name = "lb";
+            this.lb.Size = new System.Drawing.Size(120, 95);
+            this.lb.TabIndex = 41;
+            // 
+            // FiltrarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(714, 532);
+            this.Controls.Add(this.lb);
             this.Controls.Add(this.Buscar);
             this.Controls.Add(this.txtVerNombreMaterial);
-            this.Controls.Add(this.dgvVerMateriales);
+            this.Controls.Add(this.gridClientes);
             this.Controls.Add(this.txtAdvertencia);
             this.Controls.Add(this.btnActualizarMaterial);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "VerMateriales";
+            this.Name = "FiltrarClientes";
             this.Text = "VerMateriales";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvVerMateriales)).EndInit();
+            this.Load += new System.EventHandler(this.FiltrarClientes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gridClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorActualizarMaterial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errornombre)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errormarca)).EndInit();
@@ -210,7 +221,7 @@
         #endregion
         private System.Windows.Forms.Button btnActualizarMaterial;
         private System.Windows.Forms.Label txtAdvertencia;
-        private System.Windows.Forms.DataGridView dgvVerMateriales;
+        private System.Windows.Forms.DataGridView gridClientes;
         private System.Windows.Forms.TextBox Buscar;
         private System.Windows.Forms.Label txtVerNombreMaterial;
         private System.Windows.Forms.ErrorProvider errorActualizarMaterial;
@@ -218,5 +229,6 @@
         private System.Windows.Forms.ErrorProvider errormarca;
         private System.Windows.Forms.ErrorProvider errorexistencia;
         private System.Windows.Forms.ErrorProvider errorPrecio;
+        private System.Windows.Forms.ListBox lb;
     }
 }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ferreteria
 {
-    public partial class VerMateriales : Form
+    public partial class FiltrarClientes : Form
     {
         bool agregar = false;
         string estado = "s";
@@ -22,7 +22,7 @@ namespace ferreteria
         /*datatable global en private para leer los datos*/
         private DataTable dt = new DataTable();
 
-        public VerMateriales()
+        public FiltrarClientes()
         {
             InitializeComponent();
             //dgvVerMateriales.DataSource = bd.SelectDataTable("select nombre_material Nombre, marca Marca, precio_material Precio_kg, existencia Existencia, estado Estado  from Material ");
@@ -31,67 +31,22 @@ namespace ferreteria
 
         private async void btnActualizarMaterial_Click(object sender, EventArgs e)
         {
-           /* nuevaExistencia = float.Parse(txtbVerExistenciaMaterial.Text);
-            if (txtbVerNomMaterial.Text == "" || txtbVerMarcaMaterial.Text == "" || txtbVerPreciomaterial.Text == "" || txtbVerExistenciaMaterial.Text == "")
+            var cliente = Declaraciones.Clientes;
+            string dato = Buscar.Text;
+            if (dato == "")
             {
-                errorActualizarMaterial.SetError(btnActualizarMaterial, "Uno o varios campos aun no llenos");
+                errornombre.SetError(Buscar, "Por favor llene este campo");
+                // gridClie;ntes.DataSource = Consulta.ToList()
+                //  buscarPorid = "select nombre_producto, id_categoria, id_material, peso_producto, total from Productos ORDER BY id_productos ASC";
             }
             else
             {
-                if (checkModEstadoMaterial.Checked == false)
-                {
-                    estado = "n";
-                }
-                else
-                {
-                    estado = "s";
-                }
-                if (txtbVerExistenciaMaterial.Text == "")
-                {
-                    errorPrecio.SetError(txtbVerPreciomaterial, "El precio no puede ser cero o nulo");
-                }
-                else
-                {
-                    precioMaterial = float.Parse(txtbVerPreciomaterial.Text);
-                    if (precioMaterial == 0)
-                    {
-                        errorPrecio.SetError(txtbVerPreciomaterial,"El precio no puede ser cero o nolo");
-                    }
-                    else
-                    {
-                        precio_gramo = precioMaterial / 1000;
-                        errorActualizarMaterial.SetError(btnActualizarMaterial, "");
-                        string nombreValidarMaterial = (string)dgvVerMateriales.CurrentRow.Cells["Nombre"].Value;
-                        string Cadena = "UPDATE material SET nombre_material = '" + txtbVerNomMaterial.Text + "', marca = '" + txtbVerMarcaMaterial.Text + "', precio_gramo = " + precio_gramo + ", precio_material = " + precioMaterial + ", existencia = " + nuevaExistencia + ", estado = '" + estado + "'  where nombre_material = '" + nombreValidarMaterial + "';";
+                var Consulta = cliente.Where(x => x.Nombre.Contains(dato)).Select(c => new {Nombres = c.Nombre}).ToList();
+                gridClientes.DataSource = Consulta;
+                // buscarPorid = "select nombre_material Nombre, marca Marca, precio_material Precio_kg, existencia Existencia, estado Estado  from Material  where nombre_material LIKE '%" + dato + "%' ORDER BY nombre_material ASC";
+                // buscarPorid = "select nombre_producto, id_categoria, id_material, peso_producto, total from Productos where nombre_producto LIKE '%" + dato + "%' ORDER BY nombre_producto ASC";
+            }
 
-                        if (!string.IsNullOrEmpty(Cadena))// quitar en caso de no querer insertar un producto a la base de datos
-                        {
-                            if (!bd.executecommand(Cadena))
-                            {
-                                MessageBox.Show("Error al actualizar Material");
-                            }
-                            else
-                            {
-                                MessageBox.Show("Material actualizado con exito");
-                                errornombre.SetError(txtVerNombreMaterial, "");
-                                errormarca.SetError(txtbVerMarcaMaterial, "");
-                                errorexistencia.SetError(txtVerExistenciaMaterial, "");
-                                errorPrecio.SetError(txtbVerPreciomaterial, "");
-                            }
-
-                        }
-                        agregar = true;
-                        dgvVerMateriales.DataSource = bd.SelectDataTable("select nombre_material Nombre, marca Marca, precio_material Precio_kg, existencia Existencia, estado Estado  from Material ");
-                        txtbVerNomMaterial.Text = "";
-                        txtbVerMarcaMaterial.Text = "";
-                        txtbVerExistenciaMaterial.Text = "";
-                        txtbVerPreciomaterial.Text = "";
-                        todo_falso();
-                    }
-                    
-                } 
-            }*/
-            
         }
 
         private void valirCampos(object sender, MouseEventArgs e)
@@ -176,13 +131,21 @@ namespace ferreteria
            */
         }
 
+        private void FiltrarClientes_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void Buscar_TextChanged(object sender, EventArgs e)
         {
-            var cliente = Declaraciones.Clientes;
+            /*var cliente = Declaraciones.Clientes;
             string dato = Buscar.Text;
             if (dato == "")
             {
-                var Consulta = cliente.Select(x => x);
+                var Consulta = cliente.SelectMany(x => x.Nombre);
+                lb.DataSource = null;
+                lb.DataSource = Consulta.ToList();
+               // gridClie;ntes.DataSource = Consulta.ToList()
                 //  buscarPorid = "select nombre_producto, id_categoria, id_material, peso_producto, total from Productos ORDER BY id_productos ASC";
             }
             else
@@ -190,7 +153,7 @@ namespace ferreteria
                 var Consulta = cliente.Where(x => x.Nombre.Contains(dato)).Select(x => x);
                 // buscarPorid = "select nombre_material Nombre, marca Marca, precio_material Precio_kg, existencia Existencia, estado Estado  from Material  where nombre_material LIKE '%" + dato + "%' ORDER BY nombre_material ASC";
                 // buscarPorid = "select nombre_producto, id_categoria, id_material, peso_producto, total from Productos where nombre_producto LIKE '%" + dato + "%' ORDER BY nombre_producto ASC";
-            }
+            }*/
 
            // dgvVerMateriales.DataSource = bd.SelectDataTable(buscarPorid);
         }

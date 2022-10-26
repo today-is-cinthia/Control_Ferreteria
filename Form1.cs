@@ -97,7 +97,7 @@ namespace ferreteria
         }
         private void icbtn_materiales_Click(object sender, EventArgs e)
         {
-            //AbrirFormularioHijo(new VerMateriales());
+            AbrirFormularioHijo(new FiltrarClientes());
             mostrarSubMenu(panel_materiales);
             Activarboton(sender, RGBcolore.color3);
         }
