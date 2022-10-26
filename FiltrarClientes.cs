@@ -41,7 +41,7 @@ namespace ferreteria
             }
             else
             {
-                var Consulta = cliente.Where(x => x.Nombre.Contains(dato)).Select(c => new {Nombres = c.Nombre}).ToList();
+                var Consulta = cliente.Where(x => x.Nombre.Contains(dato)).Select(c => new {Id = c.IdCliente ,Nombres = c.Nombre, Teléfono = c.Telefono, Direccion = c.Direccion}).ToList();
                 gridClientes.DataSource = Consulta;
                 // buscarPorid = "select nombre_material Nombre, marca Marca, precio_material Precio_kg, existencia Existencia, estado Estado  from Material  where nombre_material LIKE '%" + dato + "%' ORDER BY nombre_material ASC";
                 // buscarPorid = "select nombre_producto, id_categoria, id_material, peso_producto, total from Productos where nombre_producto LIKE '%" + dato + "%' ORDER BY nombre_producto ASC";
