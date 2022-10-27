@@ -68,6 +68,12 @@
     <Compile Include="Cliente.cs" />
     <Compile Include="Declaraciones.cs" />
     <Compile Include="Ferreteria.cs" />
+    <Compile Include="FiltrarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FiltrarProductos.designer.cs">
+      <DependentUpon>FiltrarProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FiltrarClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,11 +88,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RegistroVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistroVentas.designer.cs">
+      <DependentUpon>RegistroVentas.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AgregarCliente.resx">
       <DependentUpon>AgregarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FiltrarProductos.resx">
+      <DependentUpon>FiltrarProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FiltrarClientes.resx">
       <DependentUpon>FiltrarClientes.cs</DependentUpon>
@@ -103,6 +118,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RegistroVentas.resx">
+      <DependentUpon>RegistroVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

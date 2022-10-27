@@ -13,14 +13,12 @@ namespace ferreteria
     public partial class AgregarCliente : Form
     {
         bool agregar = false;
-        float precio = 0, exitencia = 0, precio_gramo = 0;
 
-        /*Crea la base de datos global
-        BaseDeDatos bd = new BaseDeDatos();*/
+
         public AgregarCliente()
         {
             InitializeComponent();
-           // dgvAgregarMaterial.DataSource = bd.SelectDataTable("select nombre_material Nombre, marca Marca, precio_gramo Precio_Gramo, precio_material Precio, existencia Existencia  from Material");
+          
         }
 
         void Limpiar()
@@ -78,43 +76,10 @@ namespace ferreteria
             agregar = false;
         }
 
-       /* private void calculos(object sender, KeyEventArgs e)
-        {
-            if (txtDireccion.Text != "" && txtTelefono.Text != "")
-            {
-                precio = float.Parse(txtDireccion.Text);
-                exitencia = float.Parse(txtTelefono.Text);
-                if (precio == 0)
-                {
-                    precio_gramo = 1;
-                }
-                if (exitencia > 1)
-                {
-                    precio_gramo = precio / exitencia;
-                }
-                else
-                {
-                    MessageBox.Show("La existencia no puede ser menor o igual a cero");
-                }
-            }
-        }*/
 
         private void Buscar_TextChanged(object sender, EventArgs e)
         {
-            /*string buscarPorid;
-            string dato = Buscar.Text;
-            if (dato == "")
-            {
-                buscarPorid = "select nombre_material Nombre, marca Marca, precio_material Precio_kg, existencia Existencia  from Material ORDER BY id_material ASC";
-                //  buscarPorid = "select nombre_producto, id_categoria, id_material, peso_producto, total from Productos ORDER BY id_productos ASC";
-            }
-            else
-            {
-                buscarPorid = "select nombre_material Nombre, marca Marca, precio_material Precio_kg, existencia Existencia  from Material  where nombre_material LIKE '%" + dato + "%' ORDER BY nombre_material ASC";
-                // buscarPorid = "select nombre_producto, id_categoria, id_material, peso_producto, total from Productos where nombre_producto LIKE '%" + dato + "%' ORDER BY nombre_producto ASC";
-            }*/
 
-            //dgvAgregarMaterial.DataSource = bd.SelectDataTable(buscarPorid);
         }
 
         private void txtVerNombreMaterial_Click(object sender, EventArgs e)

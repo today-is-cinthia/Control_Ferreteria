@@ -14,3 +14,5 @@ C:\ferreteria\obj\Debug\ferreteria.pdb
 C:\ferreteria\obj\Debug\ferreteria.AgregarProducto.resources
 C:\ferreteria\obj\Debug\ferreteria.AgregarCliente.resources
 C:\ferreteria\obj\Debug\ferreteria.FiltrarClientes.resources
+C:\ferreteria\obj\Debug\ferreteria.FiltrarProductos.resources
+C:\ferreteria\obj\Debug\ferreteria.RegistroVentas.resources

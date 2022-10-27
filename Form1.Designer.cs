@@ -122,7 +122,7 @@
             this.icbtn_registroVenta.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.icbtn_registroVenta.Size = new System.Drawing.Size(200, 40);
             this.icbtn_registroVenta.TabIndex = 4;
-            this.icbtn_registroVenta.Text = "Registro de Ventas";
+            this.icbtn_registroVenta.Text = "Facturar Compra";
             this.icbtn_registroVenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.icbtn_registroVenta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.icbtn_registroVenta.UseVisualStyleBackColor = true;
@@ -145,7 +145,7 @@
             this.icbtn_ventas.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.icbtn_ventas.Size = new System.Drawing.Size(200, 40);
             this.icbtn_ventas.TabIndex = 7;
-            this.icbtn_ventas.Text = "Ventas";
+            this.icbtn_ventas.Text = "Facturas";
             this.icbtn_ventas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.icbtn_ventas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.icbtn_ventas.UseVisualStyleBackColor = true;

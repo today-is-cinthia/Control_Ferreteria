@@ -85,7 +85,7 @@ namespace ferreteria
 
         private void icbtn_Productos_Click(object sender, EventArgs e)
         {
-            //AbrirFormularioHijo(new VerProductos());
+            AbrirFormularioHijo(new FiltrarProductos());
             mostrarSubMenu(panel_Productos);
             Activarboton(sender, RGBcolore.color1);
         }
@@ -213,7 +213,7 @@ namespace ferreteria
         private void icbtn_registroVenta_Click(object sender, EventArgs e)
         {
             Activarbotondepanel(sender, RGBcolore.color2);
-            //AbrirFormularioHijo(new RegistroVentas());
+            AbrirFormularioHijo(new RegistroVentas());
         }
 
         private void icbtn_agregraProducto_Click(object sender, EventArgs e)
