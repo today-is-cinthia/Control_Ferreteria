@@ -10,5 +10,7 @@ namespace ferreteria
     {
         public static List<Ferreteria> Productos = new List<Ferreteria>();
         public static List<Cliente> Clientes = new List<Cliente>();
+        public static List<Factura> Facturas = new List<Factura>();
+        public static List<Carrito> carro = new List<Carrito>();
     }
 }

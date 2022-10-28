@@ -12,7 +12,6 @@ namespace ferreteria
 {
     public partial class RegistroVentas : Form
     {
-        int id_venta= 0;
 
         public RegistroVentas()
         {
@@ -44,6 +43,31 @@ namespace ferreteria
         private void gridCompras_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnCProducto_Click(object sender, EventArgs e)
+        {
+
+
+            Declaraciones.carro.Add(new Carrito(
+                cbProductos.Text,
+                int.Parse(txtCant.Text)
+                ));
+            gridCarrito.DataSource = null;
+            gridCarrito.DataSource = Declaraciones.carro;
+        }
+
+        private void btnComprar_Click(object sender, EventArgs e)
+        {
+            Declaraciones.Facturas.Add(new Factura(
+                int.Parse(txtNFac.Text),
+                DateTime.Parse(dtFactura.Text),
+                int.Parse(txtDescuento.Text),
+                int.Parse(txtIdCliente.Text)
+                ));
+
+            gridCProducto.DataSource = null;
+            gridCProducto.DataSource = Declaraciones.Facturas;
         }
     }
 }
