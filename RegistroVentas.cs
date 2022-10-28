@@ -49,22 +49,38 @@ namespace ferreteria
         {
 
 
-            Declaraciones.carro.Add(new Carrito(
+            /*Declaraciones.carro.Add(new Carrito(
                 cbProductos.Text,
                 int.Parse(txtCant.Text)
                 ));
             gridCarrito.DataSource = null;
-            gridCarrito.DataSource = Declaraciones.carro;
+            gridCarrito.DataSource = Declaraciones.carro;*/
         }
 
         private void btnComprar_Click(object sender, EventArgs e)
         {
+            float Total = 0;
+            var Consulta1 = Declaraciones.Productos.Where(x => x.Producto == cbProductos.Text).Select(x => x.PrecioMayo).First();
+            var Consulta2 = Declaraciones.Productos.Where(x => x.Producto == cbProductos.Text).Select(x => x.PrecioUni).First();
+
+            if (int.Parse(txtCant.Text) >= 12)
+            {
+                Total = float.Parse(txtCant.Text) * Consulta1;
+            }
+            else
+            {
+                Total = float.Parse(txtCant.Text) * Consulta2;
+            }
+
             Declaraciones.Facturas.Add(new Factura(
                 int.Parse(txtNFac.Text),
                 DateTime.Parse(dtFactura.Text),
-                int.Parse(txtDescuento.Text),
-                int.Parse(txtIdCliente.Text)
+                cbProductos.Text,
+                int.Parse(txtCant.Text),
+                int.Parse(txtIdCliente.Text),
+                Total
                 ));
+
 
             gridCProducto.DataSource = null;
             gridCProducto.DataSource = Declaraciones.Facturas;

@@ -91,7 +91,7 @@ namespace ferreteria
         }
         private void icbtn_ventas_Click(object sender, EventArgs e)
         {
-            //AbrirFormularioHijo(new VerVentas());
+            AbrirFormularioHijo(new Facturas());
             mostrarSubMenu(panel_Ventas);
             Activarboton(sender, RGBcolore.color2);
         }

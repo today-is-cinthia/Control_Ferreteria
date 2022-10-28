@@ -38,7 +38,6 @@
             this.icbtn_ingresarMaterial = new FontAwesome.Sharp.IconButton();
             this.icbtn_materiales = new FontAwesome.Sharp.IconButton();
             this.panel_Productos = new System.Windows.Forms.Panel();
-            this.icbtn_modificarProducto = new FontAwesome.Sharp.IconButton();
             this.icbtn_agregraProducto = new FontAwesome.Sharp.IconButton();
             this.icbtn_Productos = new FontAwesome.Sharp.IconButton();
             this.panel_logo = new System.Windows.Forms.Panel();
@@ -85,7 +84,7 @@
             this.icbtn_categorias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icbtn_categorias.IconSize = 35;
             this.icbtn_categorias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtn_categorias.Location = new System.Drawing.Point(0, 356);
+            this.icbtn_categorias.Location = new System.Drawing.Point(0, 338);
             this.icbtn_categorias.Name = "icbtn_categorias";
             this.icbtn_categorias.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.icbtn_categorias.Size = new System.Drawing.Size(200, 40);
@@ -100,7 +99,7 @@
             // 
             this.panel_Ventas.Controls.Add(this.icbtn_registroVenta);
             this.panel_Ventas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Ventas.Location = new System.Drawing.Point(0, 312);
+            this.panel_Ventas.Location = new System.Drawing.Point(0, 294);
             this.panel_Ventas.Name = "panel_Ventas";
             this.panel_Ventas.Size = new System.Drawing.Size(200, 44);
             this.panel_Ventas.TabIndex = 8;
@@ -140,7 +139,7 @@
             this.icbtn_ventas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icbtn_ventas.IconSize = 35;
             this.icbtn_ventas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtn_ventas.Location = new System.Drawing.Point(0, 272);
+            this.icbtn_ventas.Location = new System.Drawing.Point(0, 254);
             this.icbtn_ventas.Name = "icbtn_ventas";
             this.icbtn_ventas.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.icbtn_ventas.Size = new System.Drawing.Size(200, 40);
@@ -155,7 +154,7 @@
             // 
             this.panel_materiales.Controls.Add(this.icbtn_ingresarMaterial);
             this.panel_materiales.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_materiales.Location = new System.Drawing.Point(0, 230);
+            this.panel_materiales.Location = new System.Drawing.Point(0, 212);
             this.panel_materiales.Name = "panel_materiales";
             this.panel_materiales.Size = new System.Drawing.Size(200, 42);
             this.panel_materiales.TabIndex = 6;
@@ -195,10 +194,10 @@
             this.icbtn_materiales.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.icbtn_materiales.IconSize = 35;
             this.icbtn_materiales.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtn_materiales.Location = new System.Drawing.Point(0, 190);
+            this.icbtn_materiales.Location = new System.Drawing.Point(0, 166);
             this.icbtn_materiales.Name = "icbtn_materiales";
             this.icbtn_materiales.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.icbtn_materiales.Size = new System.Drawing.Size(200, 40);
+            this.icbtn_materiales.Size = new System.Drawing.Size(200, 46);
             this.icbtn_materiales.TabIndex = 13;
             this.icbtn_materiales.Text = "Clientes";
             this.icbtn_materiales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -208,36 +207,12 @@
             // 
             // panel_Productos
             // 
-            this.panel_Productos.Controls.Add(this.icbtn_modificarProducto);
             this.panel_Productos.Controls.Add(this.icbtn_agregraProducto);
             this.panel_Productos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_Productos.Location = new System.Drawing.Point(0, 112);
             this.panel_Productos.Name = "panel_Productos";
-            this.panel_Productos.Size = new System.Drawing.Size(200, 78);
+            this.panel_Productos.Size = new System.Drawing.Size(200, 54);
             this.panel_Productos.TabIndex = 4;
-            // 
-            // icbtn_modificarProducto
-            // 
-            this.icbtn_modificarProducto.Dock = System.Windows.Forms.DockStyle.Top;
-            this.icbtn_modificarProducto.FlatAppearance.BorderSize = 0;
-            this.icbtn_modificarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.icbtn_modificarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.icbtn_modificarProducto.ForeColor = System.Drawing.SystemColors.Window;
-            this.icbtn_modificarProducto.IconChar = FontAwesome.Sharp.IconChar.PencilAlt;
-            this.icbtn_modificarProducto.IconColor = System.Drawing.Color.White;
-            this.icbtn_modificarProducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.icbtn_modificarProducto.IconSize = 35;
-            this.icbtn_modificarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtn_modificarProducto.Location = new System.Drawing.Point(0, 40);
-            this.icbtn_modificarProducto.Name = "icbtn_modificarProducto";
-            this.icbtn_modificarProducto.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.icbtn_modificarProducto.Size = new System.Drawing.Size(200, 40);
-            this.icbtn_modificarProducto.TabIndex = 2;
-            this.icbtn_modificarProducto.Text = "Modificar Producto";
-            this.icbtn_modificarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.icbtn_modificarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.icbtn_modificarProducto.UseVisualStyleBackColor = true;
-            this.icbtn_modificarProducto.Click += new System.EventHandler(this.icbtn_modificarProducto_Click_1);
             // 
             // icbtn_agregraProducto
             // 
@@ -391,7 +366,6 @@
         private System.Windows.Forms.Panel panel_contenedor;
         private System.Windows.Forms.PictureBox pictureBox1;
         private FontAwesome.Sharp.IconButton icbtn_agregraProducto;
-        private FontAwesome.Sharp.IconButton icbtn_modificarProducto;
     }
 }
 

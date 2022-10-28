@@ -1,7 +1,7 @@
 ﻿namespace ferreteria
 {
-    partial class FiltrarProductos
-    {
+    partial class Facturas
+    { 
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -43,6 +43,11 @@
             this.errormarca = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorexistencia = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorPrecio = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtDescuento = new System.Windows.Forms.TextBox();
+            this.labelT = new System.Windows.Forms.Label();
+            this.labelTotal = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorActualizarMaterial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errornombre)).BeginInit();
@@ -154,12 +159,12 @@
             this.txtVerNombreMaterial.AutoSize = true;
             this.txtVerNombreMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVerNombreMaterial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.txtVerNombreMaterial.Location = new System.Drawing.Point(281, 38);
+            this.txtVerNombreMaterial.Location = new System.Drawing.Point(253, 38);
             this.txtVerNombreMaterial.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtVerNombreMaterial.Name = "txtVerNombreMaterial";
-            this.txtVerNombreMaterial.Size = new System.Drawing.Size(133, 20);
+            this.txtVerNombreMaterial.Size = new System.Drawing.Size(182, 20);
             this.txtVerNombreMaterial.TabIndex = 39;
-            this.txtVerNombreMaterial.Text = "Filtrar Producto";
+            this.txtVerNombreMaterial.Text = "Búsqueda de Factura";
             // 
             // errorActualizarMaterial
             // 
@@ -181,12 +186,80 @@
             // 
             this.errorPrecio.ContainerControl = this;
             // 
-            // FiltrarProductos
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.label1.Location = new System.Drawing.Point(532, 78);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(145, 17);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "Aplicar Descuento:";
+            // 
+            // txtDescuento
+            // 
+            this.txtDescuento.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDescuento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescuento.Location = new System.Drawing.Point(572, 116);
+            this.txtDescuento.Multiline = true;
+            this.txtDescuento.Name = "txtDescuento";
+            this.txtDescuento.Size = new System.Drawing.Size(73, 24);
+            this.txtDescuento.TabIndex = 42;
+            this.txtDescuento.TextChanged += new System.EventHandler(this.txtDescuento_TextChanged);
+            // 
+            // labelT
+            // 
+            this.labelT.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelT.AutoSize = true;
+            this.labelT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.labelT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.labelT.Location = new System.Drawing.Point(34, 123);
+            this.labelT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelT.Name = "labelT";
+            this.labelT.Size = new System.Drawing.Size(50, 17);
+            this.labelT.TabIndex = 43;
+            this.labelT.Text = "Total:";
+            // 
+            // labelTotal
+            // 
+            this.labelTotal.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelTotal.AutoSize = true;
+            this.labelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.labelTotal.ForeColor = System.Drawing.Color.Black;
+            this.labelTotal.Location = new System.Drawing.Point(66, 161);
+            this.labelTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelTotal.Name = "labelTotal";
+            this.labelTotal.Size = new System.Drawing.Size(31, 17);
+            this.labelTotal.TabIndex = 44;
+            this.labelTotal.Text = "0.0";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.label2.Location = new System.Drawing.Point(35, 161);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(27, 17);
+            this.label2.TabIndex = 45;
+            this.label2.Text = "C$";
+            // 
+            // Facturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(714, 532);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.labelTotal);
+            this.Controls.Add(this.labelT);
+            this.Controls.Add(this.txtDescuento);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Buscar);
             this.Controls.Add(this.txtVerNombreMaterial);
             this.Controls.Add(this.gridClientes);
@@ -194,7 +267,7 @@
             this.Controls.Add(this.btnActualizarMaterial);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FiltrarProductos";
+            this.Name = "Facturas";
             this.Text = "VerMateriales";
             this.Load += new System.EventHandler(this.FiltrarClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridClientes)).EndInit();
@@ -219,5 +292,10 @@
         private System.Windows.Forms.ErrorProvider errormarca;
         private System.Windows.Forms.ErrorProvider errorexistencia;
         private System.Windows.Forms.ErrorProvider errorPrecio;
+        private System.Windows.Forms.TextBox txtDescuento;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelTotal;
+        private System.Windows.Forms.Label labelT;
     }
 }

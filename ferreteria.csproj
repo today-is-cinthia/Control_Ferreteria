@@ -65,11 +65,16 @@
     <Compile Include="AgregarProducto.designer.cs">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Carrito.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Declaraciones.cs" />
     <Compile Include="Factura.cs" />
     <Compile Include="Ferreteria.cs" />
+    <Compile Include="Facturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturas.designer.cs">
+      <DependentUpon>Facturas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FiltrarProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AgregarProducto.resx">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facturas.resx">
+      <DependentUpon>Facturas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FiltrarProductos.resx">
       <DependentUpon>FiltrarProductos.cs</DependentUpon>
