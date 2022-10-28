@@ -104,7 +104,7 @@ namespace ferreteria
         private void icbtnCategoria_Click(object sender, EventArgs e)
         {
             ocultarSubMenu();
-            //AbrirFormularioHijo(new VerCategorias());
+            AbrirFormularioHijo(new Facturas_Clientes());
             Activarboton(sender, RGBcolore.color6);
         }
         private void panel_lateral_Paint(object sender, PaintEventArgs e)

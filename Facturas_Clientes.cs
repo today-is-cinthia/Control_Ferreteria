@@ -10,47 +10,31 @@ using System.Windows.Forms;
 
 namespace ferreteria
 {
-    public partial class Facturas : Form
+    public partial class Facturas_Clientes : Form
     {
         bool agregar = false;
 
-        float Costo_T = 0;
-        private bool existenciaBool = false;
-        /*Crea la base de datos global*/
-        //BaseDeDatos bd = new BaseDeDatos();
-        /*datatable global en private para leer los datos*/
-        private DataTable dt = new DataTable();
 
-        public Facturas()
+        public Facturas_Clientes()
         {
             InitializeComponent();
-            //dgvVerMateriales.DataSource = bd.SelectDataTable("select nombre_material Nombre, marca Marca, precio_material Precio_kg, existencia Existencia, estado Estado  from Material ");
-            todo_falso();
         }
 
         private async void btnActualizarMaterial_Click(object sender, EventArgs e)
         {
-
-            var producto = Declaraciones.Facturas;
             string dato = Buscar.Text;
             if (dato == "")
             {
                 errornombre.SetError(Buscar, "Por favor llene este campo");
-
+               
             }
             else
             {
-                var Consulta = producto.Where(x => x.NFactura == int.Parse(dato)).Select(c => new { NFactura = c.NFactura, Fecha = c.Fecha, Producto = c.Productos, Cantidad = c.Cantidad, Total = c.Total, IdCliente = c.IdCliente }).ToList();
-                gridClientes.DataSource = Consulta;
-                int conteo = 0;
-                conteo = gridClientes.RowCount;
-
-                for (int i = 0; i < conteo; i++)
-                {
-                    Costo_T += float.Parse(gridClientes.Rows[i].Cells[4].Value.ToString());
-                }
-                labelTotal.Text = Costo_T.ToString();
+                var Consulta = from fac in Declaraciones.Facturas join cl in Declaraciones.Clientes on fac.IdCliente equals cl.IdCliente where fac.IdCliente == int.Parse(dato) select new { Fecha = fac.Fecha };
+                gridClientes.DataSource = null;
+                gridClientes.DataSource = Consulta; 
             }
+
         }
 
         private void valirCampos(object sender, MouseEventArgs e)
@@ -100,7 +84,6 @@ namespace ferreteria
        
         private void todo_falso()
         {
-
         }
 
         private void dgvVerMateriales_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -113,14 +96,8 @@ namespace ferreteria
 
         }
 
-        private void txtDescuento_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void Buscar_TextChanged(object sender, EventArgs e)
         {
-
 
         }
 
@@ -145,15 +122,5 @@ namespace ferreteria
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            button1.Enabled = false;
-            float total_desc = 0;
-            float desc = float.Parse(txtDescuento.Text) / 100;
-
-            total_desc = Costo_T * desc;
-
-            labelTotal.Text = (Costo_T - total_desc).ToString();
-        }
     }
 }

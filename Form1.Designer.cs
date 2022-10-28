@@ -89,7 +89,7 @@
             this.icbtn_categorias.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.icbtn_categorias.Size = new System.Drawing.Size(200, 40);
             this.icbtn_categorias.TabIndex = 10;
-            this.icbtn_categorias.Text = "Categorias";
+            this.icbtn_categorias.Text = "Facturas y Clientes";
             this.icbtn_categorias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.icbtn_categorias.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.icbtn_categorias.UseVisualStyleBackColor = true;

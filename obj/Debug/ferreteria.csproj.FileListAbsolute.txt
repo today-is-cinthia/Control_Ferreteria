@@ -17,3 +17,4 @@ C:\ferreteria\obj\Debug\ferreteria.FiltrarClientes.resources
 C:\ferreteria\obj\Debug\ferreteria.FiltrarProductos.resources
 C:\ferreteria\obj\Debug\ferreteria.RegistroVentas.resources
 C:\ferreteria\obj\Debug\ferreteria.Facturas.resources
+C:\ferreteria\obj\Debug\ferreteria.Facturas_Clientes.resources
