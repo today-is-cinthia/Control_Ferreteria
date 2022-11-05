@@ -40,7 +40,7 @@ namespace ferreteria
             }
             else
             {
-                var Consulta = producto.Where(x => x.NFactura == int.Parse(dato)).Select(c => new { NFactura = c.NFactura, Fecha = c.Fecha, Producto = c.Productos, Cantidad = c.Cantidad, Total = c.Total, IdCliente = c.IdCliente }).ToList();
+                var Consulta = producto.Where(x => x.NFactura == int.Parse(dato)).Select(c => new { NFactura = c.NFactura, Fecha = c.Fecha, Total = c.Total, IdCliente = c.IdCliente }).ToList();
                 gridClientes.DataSource = Consulta;
                 int conteo = 0;
                 conteo = gridClientes.RowCount;

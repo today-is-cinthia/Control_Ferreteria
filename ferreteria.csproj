@@ -65,6 +65,7 @@
     <Compile Include="AgregarProducto.designer.cs">
       <DependentUpon>AgregarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Carrito.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Declaraciones.cs" />
     <Compile Include="Factura.cs" />

@@ -45,17 +45,6 @@ namespace ferreteria
 
         }
 
-        private void btnCProducto_Click(object sender, EventArgs e)
-        {
-
-
-            /*Declaraciones.carro.Add(new Carrito(
-                cbProductos.Text,
-                int.Parse(txtCant.Text)
-                ));
-            gridCarrito.DataSource = null;
-            gridCarrito.DataSource = Declaraciones.carro;*/
-        }
 
         private void btnComprar_Click(object sender, EventArgs e)
         {
@@ -72,18 +61,28 @@ namespace ferreteria
                 Total = float.Parse(txtCant.Text) * Consulta2;
             }
 
-            Declaraciones.Facturas.Add(new Factura(
+            /*Declaraciones.Facturas.Add(new Factura(
                 int.Parse(txtNFac.Text),
                 DateTime.Parse(dtFactura.Text),
                 cbProductos.Text,
                 int.Parse(txtCant.Text),
                 int.Parse(txtIdCliente.Text),
                 Total
-                ));
+                ));*/
 
 
             gridCProducto.DataSource = null;
             gridCProducto.DataSource = Declaraciones.Facturas;
+        }
+
+        private void btnAñadir_Click(object sender, EventArgs e)
+        {
+            Declaraciones.Carrito.Add(new Carrito(
+                cbProductos.Text,
+                int.Parse(txtCant.Text)
+                ));
+            gridCarrito.DataSource = null;
+            gridCarrito.DataSource = Declaraciones.Carrito;
         }
     }
 }
