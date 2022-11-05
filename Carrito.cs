@@ -8,11 +8,13 @@ namespace ferreteria
 {
     public class Carrito
     {
+        public int IdFactura { get; set; }
         public string Producto { get; set; }
         public int Cantidad {get; set; }
 
-        public Carrito(string p, int c)
+        public Carrito(int i,string p, int c)
         {
+            IdFactura = i;
             Producto = p;
             Cantidad = c;
         }

@@ -61,28 +61,43 @@ namespace ferreteria
                 Total = float.Parse(txtCant.Text) * Consulta2;
             }
 
-            /*Declaraciones.Facturas.Add(new Factura(
+            Declaraciones.Facturas.Add(new Factura(
                 int.Parse(txtNFac.Text),
                 DateTime.Parse(dtFactura.Text),
-                cbProductos.Text,
-                int.Parse(txtCant.Text),
+                Declaraciones.Carrito,
                 int.Parse(txtIdCliente.Text),
                 Total
-                ));*/
+                ));
 
 
             gridCProducto.DataSource = null;
             gridCProducto.DataSource = Declaraciones.Facturas;
+
+  
         }
 
         private void btnAñadir_Click(object sender, EventArgs e)
         {
             Declaraciones.Carrito.Add(new Carrito(
+                int.Parse(txtNFac.Text),
                 cbProductos.Text,
                 int.Parse(txtCant.Text)
                 ));
             gridCarrito.DataSource = null;
             gridCarrito.DataSource = Declaraciones.Carrito;
+
+        }
+
+        private void gridProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnDesplegar_Click(object sender, EventArgs e)
+        {
+            var Consulta3 = Declaraciones.Carrito.Where(x => x.IdFactura == int.Parse(txtNFac.Text)).Select(c => new {Producto =  c.Producto, Cantidad = c.Cantidad}).ToList();
+            gridProductos.DataSource = null;
+            gridProductos.DataSource = Consulta3;
         }
     }
 }

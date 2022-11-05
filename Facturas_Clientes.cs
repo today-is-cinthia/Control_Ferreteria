@@ -32,7 +32,11 @@ namespace ferreteria
             {
                 var Consulta = from fac in Declaraciones.Facturas join cl in Declaraciones.Clientes on fac.IdCliente equals cl.IdCliente where fac.IdCliente == int.Parse(dato) select new { Fecha = fac.Fecha };
                 gridClientes.DataSource = null;
-                gridClientes.DataSource = Consulta; 
+                gridClientes.DataSource = Consulta;
+                var Consulta1 = Declaraciones.Facturas.Where(x => x.IdCliente == int.Parse(dato)).Select(x => x.NFactura).First();
+                var Consulta2 = Declaraciones.Carrito.Where(x => x.IdFactura == Consulta1).Select(c => new {Producto = c.Producto, Cantidad = c.Cantidad}).ToList();
+                gridProductos.DataSource = null;
+                gridProductos.DataSource = Consulta2;
             }
 
         }
@@ -122,5 +126,9 @@ namespace ferreteria
             }
         }
 
+        private void gridProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

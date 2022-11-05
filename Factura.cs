@@ -10,15 +10,15 @@ namespace ferreteria
     {
         public int NFactura { set; get; }
         public DateTime Fecha { set; get; }
-        //List<Carrito> Productos { set; get; }
+        public List<Carrito> Productos { set; get; }
 
         public float Total { set; get; }
 
         public int IdCliente { set; get; }  
-        public Factura(int n, DateTime F, int idc, float T)
+        public Factura(int n, DateTime F,List<Carrito> p,int idc, float T)
         {
             NFactura = n;
-           // Productos = P;
+            Productos = p;
             Fecha = F; 
             IdCliente = idc;
             Total = T;
