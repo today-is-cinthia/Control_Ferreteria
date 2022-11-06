@@ -206,7 +206,7 @@ namespace ferreteria
         private void iconbtn_home_Click(object sender, EventArgs e)
         {
             submenuBool = false;
-            //AbrirFormularioHijo(new Inicio());
+            AbrirFormularioHijo(new Inicio());
             reset();
         }
 

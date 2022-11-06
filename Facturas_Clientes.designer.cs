@@ -152,7 +152,7 @@
             this.Buscar.Size = new System.Drawing.Size(215, 42);
             this.Buscar.TabIndex = 40;
             this.Buscar.TextChanged += new System.EventHandler(this.Buscar_TextChanged);
-            this.Buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloTexto);
+            this.Buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloNum);
             // 
             // txtVerNombreMaterial
             // 
@@ -216,7 +216,7 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridProductos.DefaultCellStyle = dataGridViewCellStyle6;
             this.gridProductos.EnableHeadersVisualStyles = false;
-            this.gridProductos.Location = new System.Drawing.Point(509, 210);
+            this.gridProductos.Location = new System.Drawing.Point(528, 210);
             this.gridProductos.Name = "gridProductos";
             this.gridProductos.ReadOnly = true;
             this.gridProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;

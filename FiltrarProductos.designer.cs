@@ -146,7 +146,7 @@
             this.Buscar.Size = new System.Drawing.Size(215, 42);
             this.Buscar.TabIndex = 40;
             this.Buscar.TextChanged += new System.EventHandler(this.Buscar_TextChanged);
-            this.Buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloTexto);
+            this.Buscar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.soloNum);
             // 
             // txtVerNombreMaterial
             // 

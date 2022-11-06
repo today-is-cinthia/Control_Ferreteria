@@ -30,7 +30,7 @@ namespace ferreteria
             }
             else
             {
-                var Consulta = from fac in Declaraciones.Facturas join cl in Declaraciones.Clientes on fac.IdCliente equals cl.IdCliente where fac.IdCliente == int.Parse(dato) select new { Fecha = fac.Fecha };
+                var Consulta = Declaraciones.Facturas.Where(item => item.IdCliente == int.Parse(Buscar.Text)).ToList();
                 gridClientes.DataSource = null;
                 gridClientes.DataSource = Consulta;
                 var Consulta1 = Declaraciones.Facturas.Where(x => x.IdCliente == int.Parse(dato)).Select(x => x.NFactura).First();
@@ -43,46 +43,19 @@ namespace ferreteria
 
         private void valirCampos(object sender, MouseEventArgs e)
         {
-            /*if (!agregar)
+            if (!agregar)
             {
-                if (txtbVerNomMaterial.Text == "")
+                if (Buscar.Text == "")
                 {
-                    errornombre.SetError(txtbVerNomMaterial, "Debe llenar este campo");
+                    errornombre.SetError(Buscar, "Debe llenar este campo");
                 }
-                if (txtbVerMarcaMaterial.Text == "")
-                {
-                    errormarca.SetError(txtbVerMarcaMaterial, "Debe llenar este campo");
-                }
-                if (txtbVerExistenciaMaterial.Text == "")
-                {
-                    errorexistencia.SetError(txtbVerExistenciaMaterial, "Debe llenar este campo");
-                }
-                if (txtbVerPreciomaterial.Text == "")
-                {
-                    errorPrecio.SetError(txtbVerPreciomaterial, "Debe llenar este campo");
-                }
-            }*/
+            }
             agregar = false;
         }
 
         private void validar(object sender, EventArgs e)
         {
-            /*if (txtbVerNomMaterial.Text != "")
-            {
-                errornombre.SetError(txtVerNombreMaterial, "");
-            }
-            if (txtbVerMarcaMaterial.Text != "")
-            {
-                errormarca.SetError(txtbVerMarcaMaterial, "");
-            }
-            if (txtVerExistenciaMaterial.Text != "")
-            {
-                errorexistencia.SetError(txtbVerExistenciaMaterial, "");
-            }
-            if (txtbVerPreciomaterial.Text != "")
-            {
-                errorPrecio.SetError(txtbVerPreciomaterial, "");
-            }*/
+
         }
 
        
@@ -103,14 +76,6 @@ namespace ferreteria
         private void Buscar_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void soloTexto(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && !(char.IsWhiteSpace(e.KeyChar)) && !(char.IsDigit(e.KeyChar)))
-            {
-                e.Handled = true;
-            }
         }
 
         private void soloNum(object sender, KeyPressEventArgs e)

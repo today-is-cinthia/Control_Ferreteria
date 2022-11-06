@@ -41,46 +41,20 @@ namespace ferreteria
 
         private void valirCampos(object sender, MouseEventArgs e)
         {
-            /*if (!agregar)
+            if (!agregar)
             {
-                if (txtbVerNomMaterial.Text == "")
+                if (Buscar.Text == "")
                 {
-                    errornombre.SetError(txtbVerNomMaterial, "Debe llenar este campo");
+                    errornombre.SetError(Buscar, "Debe llenar este campo");
                 }
-                if (txtbVerMarcaMaterial.Text == "")
-                {
-                    errormarca.SetError(txtbVerMarcaMaterial, "Debe llenar este campo");
-                }
-                if (txtbVerExistenciaMaterial.Text == "")
-                {
-                    errorexistencia.SetError(txtbVerExistenciaMaterial, "Debe llenar este campo");
-                }
-                if (txtbVerPreciomaterial.Text == "")
-                {
-                    errorPrecio.SetError(txtbVerPreciomaterial, "Debe llenar este campo");
-                }
-            }*/
+
+            }
             agregar = false;
         }
 
         private void validar(object sender, EventArgs e)
         {
-            /*if (txtbVerNomMaterial.Text != "")
-            {
-                errornombre.SetError(txtVerNombreMaterial, "");
-            }
-            if (txtbVerMarcaMaterial.Text != "")
-            {
-                errormarca.SetError(txtbVerMarcaMaterial, "");
-            }
-            if (txtVerExistenciaMaterial.Text != "")
-            {
-                errorexistencia.SetError(txtbVerExistenciaMaterial, "");
-            }
-            if (txtbVerPreciomaterial.Text != "")
-            {
-                errorPrecio.SetError(txtbVerPreciomaterial, "");
-            }*/
+
         }
 
        
@@ -105,10 +79,7 @@ namespace ferreteria
 
         private void soloTexto(object sender, KeyPressEventArgs e)
         {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && !(char.IsWhiteSpace(e.KeyChar)) && !(char.IsDigit(e.KeyChar)))
-            {
-                e.Handled = true;
-            }
+
         }
 
         private void soloNum(object sender, KeyPressEventArgs e)

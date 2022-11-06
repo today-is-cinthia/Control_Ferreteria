@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -58,9 +59,11 @@
             this.btnAñadir = new System.Windows.Forms.Button();
             this.gridProductos = new System.Windows.Forms.DataGridView();
             this.btnDesplegar = new System.Windows.Forms.Button();
+            this.error = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridCProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridCarrito)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNumeroFactura
@@ -117,6 +120,7 @@
             this.txtNFac.Name = "txtNFac";
             this.txtNFac.Size = new System.Drawing.Size(61, 20);
             this.txtNFac.TabIndex = 37;
+            this.txtNFac.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNum);
             // 
             // dtFactura
             // 
@@ -143,6 +147,7 @@
             this.txtIdCliente.Name = "txtIdCliente";
             this.txtIdCliente.Size = new System.Drawing.Size(61, 20);
             this.txtIdCliente.TabIndex = 41;
+            this.txtIdCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNum);
             // 
             // cbProductos
             // 
@@ -151,6 +156,7 @@
             this.cbProductos.Name = "cbProductos";
             this.cbProductos.Size = new System.Drawing.Size(127, 21);
             this.cbProductos.TabIndex = 42;
+            this.cbProductos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solotex);
             // 
             // label2
             // 
@@ -166,10 +172,13 @@
             // 
             // txtCant
             // 
-            this.txtCant.Location = new System.Drawing.Point(475, 54);
+            this.txtCant.Location = new System.Drawing.Point(487, 54);
             this.txtCant.Name = "txtCant";
-            this.txtCant.Size = new System.Drawing.Size(100, 20);
+            this.txtCant.Size = new System.Drawing.Size(70, 20);
             this.txtCant.TabIndex = 44;
+            this.txtCant.Text = "0";
+            this.txtCant.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCant.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNum);
             // 
             // label3
             // 
@@ -199,6 +208,7 @@
             this.btnComprar.Text = "Comprar";
             this.btnComprar.UseVisualStyleBackColor = false;
             this.btnComprar.Click += new System.EventHandler(this.btnComprar_Click);
+            this.btnComprar.MouseClick += new System.Windows.Forms.MouseEventHandler(this.val);
             // 
             // gridCProducto
             // 
@@ -318,7 +328,7 @@
             this.btnAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadir.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            this.btnAñadir.Location = new System.Drawing.Point(589, 66);
+            this.btnAñadir.Location = new System.Drawing.Point(612, 54);
             this.btnAñadir.Margin = new System.Windows.Forms.Padding(2);
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(93, 43);
@@ -326,6 +336,7 @@
             this.btnAñadir.Text = "Añadir al Carrito";
             this.btnAñadir.UseVisualStyleBackColor = false;
             this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
+            this.btnAñadir.MouseClick += new System.Windows.Forms.MouseEventHandler(this.validar);
             // 
             // gridProductos
             // 
@@ -356,7 +367,7 @@
             dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridProductos.DefaultCellStyle = dataGridViewCellStyle22;
             this.gridProductos.EnableHeadersVisualStyles = false;
-            this.gridProductos.Location = new System.Drawing.Point(533, 266);
+            this.gridProductos.Location = new System.Drawing.Point(542, 266);
             this.gridProductos.Name = "gridProductos";
             this.gridProductos.ReadOnly = true;
             this.gridProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -399,6 +410,10 @@
             this.btnDesplegar.UseVisualStyleBackColor = false;
             this.btnDesplegar.Click += new System.EventHandler(this.btnDesplegar_Click);
             // 
+            // error
+            // 
+            this.error.ContainerControl = this;
+            // 
             // RegistroVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -431,6 +446,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridCProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridCarrito)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.error)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,5 +471,6 @@
         private System.Windows.Forms.Button btnAñadir;
         private System.Windows.Forms.DataGridView gridProductos;
         private System.Windows.Forms.Button btnDesplegar;
+        private System.Windows.Forms.ErrorProvider error;
     }
 }

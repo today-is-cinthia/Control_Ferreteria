@@ -16,7 +16,25 @@ namespace ferreteria
         public RegistroVentas()
         {
             InitializeComponent();
-           // dgvRegistroVentas.DataSource = bd.SelectDataTable("select distinct id_factura N_Factura, productos_vendidos Productos_Comprados, fecha Fecha, total_factura Total_Facturado from Venta ");
+        }
+        private void SoloNum(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsControl(e.KeyChar)) && !(char.IsDigit(e.KeyChar)) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+        private void solotex(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && !(char.IsWhiteSpace(e.KeyChar)) && !(char.IsDigit(e.KeyChar)))
+            {
+                e.Handled = true;
+            }
         }
 
         private void dgvRegistroVentas_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -98,6 +116,35 @@ namespace ferreteria
             var Consulta3 = Declaraciones.Carrito.Where(x => x.IdFactura == int.Parse(txtNFac.Text)).Select(c => new {Producto =  c.Producto, Cantidad = c.Cantidad}).ToList();
             gridProductos.DataSource = null;
             gridProductos.DataSource = Consulta3;
+        }
+
+        private void solotex(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void validar(object sender, MouseEventArgs e)
+        {
+            if (txtNFac.Text == "")
+            {
+                error.SetError(txtNFac, "Debe llenar este campo");
+            }
+            if (cbProductos.Text == "")
+            {
+                error.SetError(cbProductos, "Debe llenar este campo");
+            }
+        }
+
+        private void val(object sender, MouseEventArgs e)
+        {
+            if (txtNFac.Text == "")
+            {
+                error.SetError(txtNFac, "Debe llenar este campo");
+            }
+            if (txtIdCliente.Text == "")
+            {
+                error.SetError(txtIdCliente, "Debe llenar este campo");
+            }
         }
     }
 }

@@ -30,7 +30,6 @@ namespace ferreteria
             txtIdCliente.Focus();
         }
 
-        //evento keypress para solo pasar numeros a al peso y al costo_luz
         private void SoloNum(object sender, KeyPressEventArgs e)
         {
             if (!(char.IsControl(e.KeyChar)) && !(char.IsDigit(e.KeyChar)) && (e.KeyChar != '.'))
@@ -146,7 +145,7 @@ namespace ferreteria
                 agregar = true;
 
                 Limpiar();
-               // dgvAgregarMaterial.DataSource = bd.SelectDataTable("select nombre_material Nombre, marca Marca, precio_gramo Precio_Gramo, precio_material Precio, existencia Existencia  from Material");
+              
             }
         }
     }

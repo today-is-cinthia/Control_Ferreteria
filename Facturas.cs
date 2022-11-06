@@ -15,18 +15,26 @@ namespace ferreteria
         bool agregar = false;
 
         float Costo_T = 0;
-        private bool existenciaBool = false;
-        /*Crea la base de datos global*/
-        //BaseDeDatos bd = new BaseDeDatos();
-        /*datatable global en private para leer los datos*/
-        private DataTable dt = new DataTable();
+
 
         public Facturas()
         {
             InitializeComponent();
-            //dgvVerMateriales.DataSource = bd.SelectDataTable("select nombre_material Nombre, marca Marca, precio_material Precio_kg, existencia Existencia, estado Estado  from Material ");
             todo_falso();
         }
+        private void SoloNum(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsControl(e.KeyChar)) && !(char.IsDigit(e.KeyChar)) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
 
         private async void btnActualizarMaterial_Click(object sender, EventArgs e)
         {
@@ -55,46 +63,19 @@ namespace ferreteria
 
         private void valirCampos(object sender, MouseEventArgs e)
         {
-            /*if (!agregar)
+            if (!agregar)
             {
-                if (txtbVerNomMaterial.Text == "")
+                if (Buscar.Text == "")
                 {
-                    errornombre.SetError(txtbVerNomMaterial, "Debe llenar este campo");
+                    errornombre.SetError(Buscar, "Debe llenar este campo");
                 }
-                if (txtbVerMarcaMaterial.Text == "")
-                {
-                    errormarca.SetError(txtbVerMarcaMaterial, "Debe llenar este campo");
-                }
-                if (txtbVerExistenciaMaterial.Text == "")
-                {
-                    errorexistencia.SetError(txtbVerExistenciaMaterial, "Debe llenar este campo");
-                }
-                if (txtbVerPreciomaterial.Text == "")
-                {
-                    errorPrecio.SetError(txtbVerPreciomaterial, "Debe llenar este campo");
-                }
-            }*/
+            }
             agregar = false;
         }
 
         private void validar(object sender, EventArgs e)
         {
-            /*if (txtbVerNomMaterial.Text != "")
-            {
-                errornombre.SetError(txtVerNombreMaterial, "");
-            }
-            if (txtbVerMarcaMaterial.Text != "")
-            {
-                errormarca.SetError(txtbVerMarcaMaterial, "");
-            }
-            if (txtVerExistenciaMaterial.Text != "")
-            {
-                errorexistencia.SetError(txtbVerExistenciaMaterial, "");
-            }
-            if (txtbVerPreciomaterial.Text != "")
-            {
-                errorPrecio.SetError(txtbVerPreciomaterial, "");
-            }*/
+
         }
 
        
@@ -124,26 +105,6 @@ namespace ferreteria
 
         }
 
-        private void soloTexto(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && !(char.IsWhiteSpace(e.KeyChar)) && !(char.IsDigit(e.KeyChar)))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void soloNum(object sender, KeyPressEventArgs e)
-        {
-            if (!(char.IsControl(e.KeyChar)) && !(char.IsDigit(e.KeyChar)) && (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -154,6 +115,14 @@ namespace ferreteria
             total_desc = Costo_T * desc;
 
             labelTotal.Text = (Costo_T - total_desc).ToString();
+        }
+
+        private void validar(object sender, MouseEventArgs e)
+        {
+            if (txtDescuento.Text == "")
+            {
+                errornombre.SetError(txtDescuento, "Debe llenar este campo");
+            }
         }
     }
 }

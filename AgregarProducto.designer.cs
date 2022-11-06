@@ -98,6 +98,7 @@
             this.txtCosto.Text = "0.0";
             this.txtCosto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCosto.TextChanged += new System.EventHandler(this.txtCosto_TextChanged);
+            this.txtCosto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNum);
             // 
             // txtVerPrecioTotal
             // 
@@ -124,9 +125,7 @@
             this.txtDescProducto.Name = "txtDescProducto";
             this.txtDescProducto.Size = new System.Drawing.Size(168, 38);
             this.txtDescProducto.TabIndex = 13;
-            this.txtDescProducto.Click += new System.EventHandler(this.validar);
             this.txtDescProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.solotex);
-            this.txtDescProducto.KeyUp += new System.Windows.Forms.KeyEventHandler(this.calculos);
             // 
             // txtVerPesoProducto
             // 
@@ -246,6 +245,7 @@
             this.txtUnitario.Text = "0.0";
             this.txtUnitario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtUnitario.EnabledChanged += new System.EventHandler(this.txtUnitario_EnabledChanged);
+            this.txtUnitario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNum);
             // 
             // label1
             // 
@@ -273,6 +273,7 @@
             this.txtMayorista.TabIndex = 42;
             this.txtMayorista.Text = "0.0";
             this.txtMayorista.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMayorista.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNum);
             // 
             // txtIdProducto
             // 
@@ -286,6 +287,7 @@
             this.txtIdProducto.Size = new System.Drawing.Size(66, 21);
             this.txtIdProducto.TabIndex = 43;
             this.txtIdProducto.TextChanged += new System.EventHandler(this.txtIdProducto_TextChanged);
+            this.txtIdProducto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNum);
             // 
             // label3
             // 
@@ -367,6 +369,7 @@
             this.txtSMin.TabIndex = 49;
             this.txtSMin.Text = "0";
             this.txtSMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSMin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNum);
             // 
             // txtSMax
             // 
@@ -381,6 +384,7 @@
             this.txtSMax.TabIndex = 50;
             this.txtSMax.Text = "0";
             this.txtSMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSMax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SoloNum);
             // 
             // AgregarProducto
             // 
