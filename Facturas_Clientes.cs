@@ -30,7 +30,15 @@ namespace ferreteria
             }
             else
             {
-                var Consulta = from fac in Declaraciones.Facturas join cl in Declaraciones.Clientes on fac.IdCliente equals cl.IdCliente where fac.IdCliente == int.Parse(dato) select new { Fecha = fac.Fecha };
+                //var Consulta = (
+                //                from fac in Declaraciones.Facturas
+                //                join cl in Declaraciones.Clientes
+                //                on fac.IdCliente equals cl.IdCliente
+                //                where fac.IdCliente == int.Parse(dato)
+                //                select new { Fecha = fac.Fecha}
+                //    );
+
+                var Consulta = Declaraciones.Facturas.Where(item => item.IdCliente == int.Parse(Buscar.Text)).ToList();
                 gridClientes.DataSource = null;
                 gridClientes.DataSource = Consulta; 
             }
